@@ -7,5 +7,10 @@ describe("calculator operation testing", () => {
       const result = calculator.sum(5, 8);
       expect(result).to.equal(13);
     });
+
+    it("should substract b - a", () => {
+      const result = calculator.substract(13, 2);
+      expect(result).to.equal(11);
+    });
   });
 });
