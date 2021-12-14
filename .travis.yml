@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "16.13.0"
+dist: trusty
+env:
+  - NODE_ENV=ci PORT=8081
+cache:
+  directories:
+    - node_modules
+install:
+  - npm install
+script:
+  - nohup npm run start &
+  - sleep 3
+  - npm run test
