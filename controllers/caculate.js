@@ -7,6 +7,8 @@ exports.calculate = (req, res, next) => {
     return res.send({ result: calculatorService.sum(a, b) });
   } else if (operation === "remainder") {
     return res.send({ result: a - b });
+  } else if (operation === "multiply") {
+    return res.send({ result: a * b });
   }
   next({ statusCode: 404, message: "Unknown operation or not supported" });
 };
